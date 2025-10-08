@@ -1,0 +1,148 @@
+:root {
+  --bg: #0f172a;       /* dark background */
+  --card: #1e293b;     /* card background */
+  --accent: #38bdf8;   /* sky blue */
+  --accent-2: #34d399; /* mint green */
+  --text: #f8fafc;     /* white text */
+  --muted: #94a3b8;    /* gray */
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-container {
+  width: 420px;
+  max-width: 95%;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.6s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #334155;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.todo-form button {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.todo-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+.todo-list {
+  list-style: none;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.todo-list li:hover {
+  transform: translateY(-2px);
+  background: #334155;
+}
+
+.todo-list li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo-list li.done span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.actions button:hover {
+  transform: scale(1.2);
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 14px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

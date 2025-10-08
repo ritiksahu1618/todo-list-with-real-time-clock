@@ -1,0 +1,11 @@
+li{
+    display: inline-block;
+    margin: 50px;
+    
+}
+
+
+.active{
+    color: rgb(236, 9, 9);
+    
+}

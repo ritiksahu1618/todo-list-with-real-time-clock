@@ -1,0 +1,80 @@
+/* Full Page Background */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Counter Card */
+.counter-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.counter-box h1 {
+  margin-bottom: 10px;
+  color: #0072ff;
+}
+
+.counter-box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Buttons Group */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Common Button Style */
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+}
+
+.increase { background: #28a745; }
+.decrease { background: #dc3545; }
+.reset { background: #ffc107; color: black; }
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Messages */
+.error {
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+}
+
+.warning {
+  margin-top: 15px;
+  color: orange;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
